@@ -41,7 +41,7 @@ public class RecSysServer {
         {
             throw new IllegalStateException("Unable to determine webroot URL location");
         }
-
+        System.out.printf("Web Root location path: %s%n", webRootLocation.getPath());
         //set index.html as the root page
         URI webRootUri = URI.create(webRootLocation.toURI().toASCIIString().replaceFirst("/index.html$","/"));
         System.out.printf("Web Root URI: %s%n", webRootUri.getPath());
