@@ -44,8 +44,10 @@ public class RecSysServer {
         System.out.printf("Web Root location path: %s%n", webRootLocation.getPath());
         //set index.html as the root page
         URI webRootUri = URI.create(webRootLocation.toURI().toASCIIString().replaceFirst("/index.html$","/"));
-        System.out.printf("Web Root URI: %s%n", webRootUri.getPath());
 
+
+        //URI webRootUri = URI.create("/Users/admin/mwp/work/dongshiyun/code/SparrowRecSys/target/SparrowRecSys-1.0-SNAPSHOT-jar-with-dependencies.jar!/webroot/");
+        System.out.printf("Web Root URI: %s%n", webRootUri.getPath());
         //load all the data to DataManager
         DataManager.getInstance().loadData(webRootUri.getPath() + "sampledata/movies.csv",
                 webRootUri.getPath() + "sampledata/links.csv",webRootUri.getPath() + "sampledata/ratings.csv",
